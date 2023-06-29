@@ -11,7 +11,7 @@ class Main extends React.Component {
   }
 
   componentDidMount() {
-    fetch(`http://www.omdbapi.com/?apikey=${process.env.REACT_APP_API_KEY}&s=matrix`)
+    fetch(`http://www.omdbapi.com/?apikey=${process.env.REACT_APP_API_KEY}&s=`)
       .then(resp => resp.json())
       .then(data => this.setState({ movies: data.Search, loading: false }))
   }
