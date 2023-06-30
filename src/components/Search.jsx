@@ -1,9 +1,17 @@
 import React from "react";
 
 class Search extends React.Component {
-	state = {
-		search: '',
-		type: 'all'
+	constructor() {
+		super();
+		this.state = {
+			search: '',
+			type: 'all'
+		}
+		this.focusSearchRef = React.createRef();
+	}
+
+	componentDidMount() {
+		this.focusSearchRef.current.focus();
 	}
 
 	handleKey = (e) => {
@@ -28,6 +36,7 @@ class Search extends React.Component {
 						onChange={(e) =>
 							this.setState({ search: e.target.value })}
 						onKeyDown={this.handleKey}
+						ref={this.focusSearchRef}
 					/>
 				</div>
 				<div className="filters">

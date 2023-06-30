@@ -6,6 +6,7 @@ function Footer() {
 		<div>Data Base by <b onClick={() => {
 			window.open('https://www.omdbapi.com', '_blank').focus();
 		}}>OMDb API</b></div>
+		<div>♥︎ React, Fetch and pure CSS</div>
 	</footer>
 }
 
