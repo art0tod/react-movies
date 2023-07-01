@@ -62,9 +62,11 @@ body {
   white-space: nowrap;
 }
 .Header .HeaderLogo {
-  font-size: large;
+  display: flex;
+  font-size: x-large;
   font-weight: bold;
-  padding: 0.6rem 0;
+  height: 3rem;
+  align-items: center;
   margin: 0;
   text-decoration: none;
   color: #f6eedd;
@@ -72,12 +74,16 @@ body {
 .Header ul {
   padding: 0;
   margin: 0;
+  height: 3rem;
   list-style: none;
   display: flex;
 }
 .Header ul li {
+  display: flex;
+  align-items: center;
   margin: 0;
-  padding: 0.6rem 1rem;
+  padding: 0 1rem;
+  height: 3rem;
   cursor: pointer;
   transition: 0.1s;
 }
@@ -174,7 +180,7 @@ body {
   width: 100%;
   border: none;
   color: hsl(41, 75%, 93%);
-  border-radius: 0 0 0 8px;
+  border-radius: 0 0 8px 8px;
   margin: 0;
   height: 2.2rem;
   padding: 0.2rem 1rem 0.2rem 1rem;
@@ -187,7 +193,7 @@ body {
 }
 .search .inlineFiels .filters {
   display: flex;
-  width: 45%;
+  width: 44%;
 }
 .search .inlineFiels .filters .hidden-toggles {
   --accent: hsla(25, 46%, 16%, 0.7);
@@ -197,7 +203,7 @@ body {
   --text-active: hsl(41, 75%, 93%);
   --border-width: 0;
   position: relative;
-  border-radius: 0 0 8px 0;
+  border-radius: 0 0 8px 8px;
   overflow: hidden;
   height: 2.2rem;
   width: 100%;
@@ -217,6 +223,7 @@ body {
   left: 0;
   border: var(--border-width) solid var(--accent);
   pointer-events: none;
+  background: hsla(25, 46%, 16%, 0.2);
 }
 .search .inlineFiels .filters .hidden-toggles__input {
   display: none;
