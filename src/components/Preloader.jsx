@@ -1,5 +1,5 @@
 function Preloader() {
-	return <h5>Loading</h5>
+  return <h2>Loading</h2>;
 }
 
-export { Preloader }
+export { Preloader };
