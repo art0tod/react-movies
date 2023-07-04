@@ -5,16 +5,28 @@ const Search = (props) => {
 
   const [search, setSearch] = useState("");
   const [type, setType] = useState("all");
+  const [page, setPage] = useState(1);
 
   const handleKey = (e) => {
     if (e.key === "Enter") {
-      searchMovies(search, type);
+      searchMovies(search, type, page);
     }
   };
 
   const handleFilter = (e) => {
     setType(e.target.dataset.type);
-    searchMovies(search, e.target.dataset.type);
+    searchMovies(search, e.target.dataset.type, setPage(1));
+  };
+
+  const incrementPage = () => {
+    setPage(page + 1)
+    searchMovies(search, type, page + 1);
+  };
+  const decrementPage = () => {
+    if (page > 1) {
+      setPage(page - 1)
+      searchMovies(search, type, page - 1);
+    }
   };
 
   return (
@@ -86,6 +98,19 @@ const Search = (props) => {
               Games
             </label>
           </div>
+        </div>
+      </div>
+      <div className="pages">
+        <div className="controls">
+          <button
+            className="decrementPage"
+            onClick={decrementPage}
+          > {'<-'} </button>
+          <div>{page}</div>
+          <button
+            className="incrementPage"
+            onClick={incrementPage}
+          >{'->'}</button>
         </div>
       </div>
     </div>

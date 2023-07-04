@@ -136,11 +136,12 @@ body {
 .movies .moviesList {
   margin: auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 2fr));
   gap: 0.6rem;
 }
 .movies .moviesList .card {
   background: hsl(42, 50%, 96%);
+  background-color: hsla(25, 46%, 16%, 0.1);
   border-radius: 8px;
   max-width: 50vh;
 }
@@ -164,9 +165,25 @@ body {
   display: flex;
   justify-content: space-between;
 }
+.movies .helper_toTop {
+  display: flex;
+  justify-content: center;
+  margin: 1.5rem 0 0.5rem 0;
+}
+.movies .helper_toTop span {
+  background-color: hsla(25, 46%, 16%, 0.2);
+  color: hsla(25, 46%, 16%, 0.7);
+  padding: 0.3rem 1.1rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.movies .helper_toTop span:hover {
+  color: hsl(41, 75%, 93%);
+  background-color: hsla(25, 46%, 16%, 0.7);
+}
 .search {
   width: 100%;
-  display: flex;
+  display: block;
 }
 .search .inlineFiels {
   width: 100%;
@@ -269,4 +286,29 @@ body {
 }
 .search .inlineFiels .filters .hidden-toggles__label:last-of-type {
   border-left: var(--border-width) solid var(--accent);
+}
+.search .pages {
+  display: flex;
+  padding: 0.5rem 0;
+}
+.search .pages .controls {
+  display: flex;
+  min-width: 10rem;
+  width: 20vw;
+  margin: 0 auto;
+  align-items: center;
+  font-size: large;
+  font-weight: bold;
+}
+.search .pages .controls .incrementPage,
+.search .pages .controls .decrementPage {
+  background: hsla(25, 46%, 16%, 0.2);
+  color: hsla(25, 46%, 16%, 0.7);
+  margin: auto;
+  padding: 0.2rem 1rem;
+  border-radius: 8px;
+}
+.search .pages .controls button:active {
+  color: hsl(41, 75%, 93%);
+  background-color: hsla(25, 46%, 16%, 0.7);
 }

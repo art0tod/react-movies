@@ -10,7 +10,7 @@ function Movie(props) {
   return (
     <div id={id} className='card'>
       <div className='cardImage'>
-        <img alt={id} src={poster} />
+        <img alt={id} src={poster} draggable={false} />
       </div>
       <div className='cardContent'>
         <span className='title'>{title}</span>

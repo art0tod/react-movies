@@ -152,12 +152,13 @@ body {
 	.moviesList {
 		margin: auto;
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+		grid-template-columns: repeat(auto-fit, minmax(200px, 2fr));
 		gap: 0.6rem;
 
 		.card {
 			background: hsl(42, 50%, 96%);
 			// box-shadow: 0 0.3rem 0.4rem 0.1rem rgba(61, 38, 22, 0.32);
+			background-color: hsla(25, 46%, 16%, 0.1);
 			border-radius: 8px;
 			max-width: 50vh;
 
@@ -185,11 +186,28 @@ body {
 			}
 		}
 	}
+	.helper_toTop {
+		display: flex;
+		justify-content: center;
+		margin: 1.5rem 0 0.5rem 0;
+
+		span {
+			background-color: hsla(25, 46%, 16%, 0.2);
+			color: hsla(25, 46%, 16%, 0.7);
+			padding: 0.3rem 1.1rem;
+			border-radius: 8px;
+			cursor: pointer;
+		}
+		span:hover {
+			color: hsl(41, 75%, 93%);
+			background-color: hsla(25, 46%, 16%, 0.7);
+		}
+	}
 }
 
 .search {
 	width: 100%;
-	display: flex;
+	display: block;
 
 	.inlineFiels {
 		width: 100%;
@@ -296,6 +314,33 @@ body {
 			}
 			.hidden-toggles__label:last-of-type {
 				border-left: var(--border-width) solid var(--accent);
+			}
+		}
+	}
+	.pages {
+		display: flex;
+		padding: 0.5rem 0;
+		.controls {
+			display: flex;
+			min-width: 10rem;
+			width: 20vw;
+			margin: 0 auto;
+			align-items: center;
+			font-size: large;
+			font-weight: bold;
+
+			.incrementPage,
+			.decrementPage {
+				background: hsla(25, 46%, 16%, 0.2);
+				color: hsla(25, 46%, 16%, 0.7);
+
+				margin: auto;
+				padding: 0.2rem 1rem;
+				border-radius: 8px;
+			}
+			button:active {
+				color: hsl(41, 75%, 93%);
+				background-color: hsla(25, 46%, 16%, 0.7);
 			}
 		}
 	}
